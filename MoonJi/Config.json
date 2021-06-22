@@ -8,5 +8,5 @@
 	"UIMainPos": [ 0.0, 0.7 ],
 	"LocationMarkerSize": 0.07,
 	"UseExCamProjectionMatrix": true,
-	"PipeInfomationSize": 0.1
+	"PipeInfomationSize": 0.15
 }
