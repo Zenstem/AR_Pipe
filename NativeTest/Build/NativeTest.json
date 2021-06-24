@@ -1,6 +1,6 @@
 {
 "companyName": "Zenstem",
-"productName": "NativeTest",
+"productName": "AR Pipe",
 "productVersion": "0.1",
 "dataUrl": "NativeTest.data.unityweb",
 "wasmCodeUrl": "NativeTest.wasm.code.unityweb",
