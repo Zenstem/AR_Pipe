@@ -39,6 +39,9 @@
       
       document.addEventListener('onARSupportedCheck', function (event) {
         enterARButton.disabled = !event.detail.supported;
+        window.setTimeout(() => {
+	unityInstance.Module.WebXR.toggleAR();
+        }, 1000);
       }, false);
       document.addEventListener('onVRSupportedCheck', function (event) {
         enterVRButton.disabled = !event.detail.supported;
