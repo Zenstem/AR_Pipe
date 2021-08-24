@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Compass Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+
+        var headingButton=document.getElementById("getHeading");
+
+        headingButton.addEventListener("click",getHeadingFunc,false);
+
+    }
+
+    function getHeadingFunc(){
+
+        navigator.compass.getCurrentHeading(onSuccess, onError);
+
+    }
+
+    function onSuccess(heading) {
+
+        alert('Heading: ' + heading.magneticHeading);
+
+    }
+
+    function onError(compassError) {
+
+        alert('Compass Error: ' + compassError.code);
+
+    }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <h1>Example</h1>
+
+    <button id="getHeading">getCurrentHeading</button>
+
+  </body>
+
+</html>
