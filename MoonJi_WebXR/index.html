@@ -34,6 +34,11 @@
         <div class="title">AR Pipe</div>
       </div>
     </div>
+    <div>
+      <form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 0px; height: 0px; position: absolute; top: -9999px;">
+        <input type="text" id="fixInput" oninput="unityInstance.Module.ccall('FixInputUpdate', null)" onblur="unityInstance.Module.ccall('FixInputOnBlur', null)" style="font-size: 42px;">
+      </form>
+    </div>
     <script>
       let enterARButton = document.getElementById('enterar');
       let enterVRButton = document.getElementById('entervr');
@@ -51,6 +56,12 @@
       enterVRButton.addEventListener('click', function (event) {
         unityInstance.Module.WebXR.toggleVR();
       }, false);
+    </script>
+    <script>
+      function FixInputOnSubmit() {
+        document.getElementById("fixInput").blur();
+        event.preventDefault();
+      }
     </script>
   </body>
 </html>
