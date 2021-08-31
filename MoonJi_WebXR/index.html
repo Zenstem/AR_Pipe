@@ -24,6 +24,11 @@
     </script>
   </head>
   <body>
+    <div>
+      <form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 400px; height: 200px; position: absolute; top: 0px;">
+        <input type="text" id="fixInput" oninput="unityInstance.Module.asmLibraryArg._FixInputUpdate()" style="font-size: 42px;">
+      </form>
+    </div>
     <div class="webgl-content" style="width: 100%; height: 100%">
       <div id="unityContainer" style="width: 100%; height: 100%"></div>
       <div class="footer">
@@ -33,11 +38,6 @@
         <div class="webxr-link">Using <a href="https://github.com/De-Panther/unity-webxr-export" target="_blank" title="WebXR Export">WebXR Export</a></div>
         <div class="title">AR Pipe</div>
       </div>
-    </div>
-    <div>
-      <form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 400px; height: 200px; position: absolute; top: 0px;">
-        <input type="text" id="fixInput" oninput="unityInstance.Module.asmLibraryArg._FixInputUpdate()" style="font-size: 42px;">
-      </form>
     </div>
     <script>
       let enterARButton = document.getElementById('enterar');
