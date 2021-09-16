@@ -2,7 +2,7 @@
 	"EarthRadius": 6378.1,
 	"ZeroLatitude": 36.39244828,
 	"ZeroLongitude": 127.40692625,
-	"ZeroAltitude": -1.0,
+	"ZeroAltitude": 64.5,
 	"UIFontSize": 0.025,
 	"UIMenuPos": [ 0.9, 0.0 ],
 	"UIMainPos": [ 0.0, 0.7 ],
