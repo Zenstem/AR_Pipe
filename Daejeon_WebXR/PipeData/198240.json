@@ -1,11 +1,11 @@
 {
 	"ID": "198240",
-	"actNo": "",
-	"actName": "",
-	"pressure": "",
+	"actNo": "D20170798",
+	"actName": "문지동654-3 효성프라자(일반용1분기)",
+	"pressure": "LPB",
 	"pressureColor": "Yellow",
-	"diameter": ,
-	"material": "",
-	"length": ,
-	"completionLength": 
+	"diameter": 90,
+	"material": "PE",
+	"length": 1.16,
+	"completionLength": 3.4
 }
