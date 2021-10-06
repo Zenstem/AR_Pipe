@@ -40,11 +40,11 @@
       
       document.addEventListener('onARSupportedCheck', function (event) {
         enterARButton.disabled = !event.detail.supported;
-        unityInstance.focus();
+        document.getElementById("unityContainer").focus();
       }, false);
       document.addEventListener('onVRSupportedCheck', function (event) {
         enterVRButton.disabled = !event.detail.supported;
-        unityInstance.focus();
+        document.getElementById("unityContainer").focus();
       }, false);
       
       enterARButton.addEventListener('click', function (event) {
