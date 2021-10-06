@@ -23,7 +23,7 @@
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Daejeon_WebXR.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body>
+  <body onload="setFocusToPlayer()">
     <div class="webgl-content" style="width: 100%; height: 100%" id="unityPlayer">
       <div id="unityContainer" style="width: 100%; height: 100%"></div>
       <div class="footer">
@@ -51,6 +51,11 @@
       enterVRButton.addEventListener('click', function (event) {
         unityInstance.Module.WebXR.toggleVR();
       }, false);
+    </script>
+    <script>
+      function setFocusToPlayer() {
+        unityInstance.focus();
+      };
     </script>
   </body>
 </html>
