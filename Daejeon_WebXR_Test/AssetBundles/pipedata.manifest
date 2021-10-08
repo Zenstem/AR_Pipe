@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2453171610
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 437193b333ebf828ae4328882935c56d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bf36b71d8b190430244baf5f928ecd26
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 822478e042e475845bdd08db3807d8f4, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/Test_pipe_All.prefab
+Dependencies: []
