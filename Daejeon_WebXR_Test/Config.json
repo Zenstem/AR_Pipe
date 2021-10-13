@@ -8,6 +8,7 @@
 	"UIMenuPos": [ 0.9, 0.0 ],
 	"UIMainPos": [ 0.0, 0.7 ],
 	"UIMapPos": [ 0.25, 0.75, 0.5, 0.25 ],
+	"LocationAdjustScale": [ 0.1 ],
 	"LocationMarkerSize": 0.045,
 	"UseExCamProjectionMatrix": true,
 	"PipeInfomationSize": 0.15
