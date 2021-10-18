@@ -10,18 +10,6 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-    <script>
-      UnityLoader.compatibilityCheck = function (unityInstance, onsuccess, onerror) {
-        if (!UnityLoader.SystemInfo.hasWebGL) {
-          unityInstance.popup('Your browser does not support WebGL',
-            [{text: 'OK', callback: onerror}]);
-        } else {
-          onsuccess();
-        }
-      }
-      
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Daejeon_WebXR_Test.json", {onProgress: UnityProgress});
-    </script>
   </head>
   <body>
     <div class="webgl-content" style="width: 100%; height: 100%" id="unityPlayer">
