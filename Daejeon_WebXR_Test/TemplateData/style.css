@@ -11,9 +11,9 @@
 .webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
 .webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
 
-.webgl-content .footer {position: fixed; width: 100%; bottom: 0; margin-top: 5px; height: 120px; line-height: 120px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
+.webgl-content .footer {position: fixed; width: 100%; bottom: 0; margin-top: 5px; height: 60px; line-height: 60px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
 .webgl-content .footer .webgl-logo, .webxr-link, .title, .enterar, .entervr {height: 100%; display: inline-block; background: transparent center no-repeat;}
-.webgl-content .footer .webgl-logo {background-image: url('SupportByZenstem.png'); width: 850px; height: 120px; float: left;}
+.webgl-content .footer .webgl-logo {background-image: url('SupportByZenstem.png'); width: 425px; height: 60px; float: center;}
 .webgl-content .footer .webxr-link {float: left;}
 .webgl-content .footer .title {margin-right: 10px; float: right;}
 .webgl-content .footer .enterar:enabled {background-color: #1eaed3; width: 38px; float: right;}
