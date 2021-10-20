@@ -7,6 +7,9 @@
 </head>
 <body>
 <div id="staticMap" style="width:512px;height:512px;"></div>
+<p>
+    <button onclick="getImageURL()">GetURL</button>
+</p>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b5d34509ba7357aff65190a05cf70747"></script>
 <script>
@@ -17,6 +20,17 @@ var staticMapContainer = document.getElementById('staticMap'), // 지도를 표�
     };
 
 var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지도를 생성합니다
+</script>
+
+<script src="html2canvas.js"></script>
+<script>
+  //이미지(png)로 다운로드
+  function getImageURL(){
+      html2canvas($("#staticMap")[0]).then(function(canvas){
+          var staticMapImageURL = canvas.toDataURL();
+          window.alert(staticMapImageURL);
+      });
+  }
 </script>
 </body>
 </html>
