@@ -21,6 +21,7 @@ var staticMapContainer = document.getElementById('staticMap'), // 지도를 표�
     };
 
 var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지도를 생성합니다
+map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
 </script>
 
 <!--script src="html2canvas.js"></script>
