@@ -27,6 +27,7 @@ var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지�
 <script>
   //이미지(png)로 다운로드
   function getImageURL(){
+      window.scrollTo(0, 0);
 //      html2canvas(document.getElementById('staticMap')).then(function(canvas){
       html2canvas(document.body).then(function(canvas){
           var staticMapImageURL = canvas.toDataURL();
