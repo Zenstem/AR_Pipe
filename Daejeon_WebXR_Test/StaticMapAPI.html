@@ -14,7 +14,7 @@
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b5d34509ba7357aff65190a05cf70747"></script>
 <script>
-var staticMapContainer = document.getElementById('staticMap'), // 지도를 표시할 div 
+var staticMapContainer = document.getElementById('textArea'), // 지도를 표시할 div 
     staticMapOption = { 
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
@@ -23,7 +23,7 @@ var staticMapContainer = document.getElementById('staticMap'), // 지도를 표�
 var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지도를 생성합니다
 </script>
 
-<script src="html2canvas.js"></script>
+<!--script src="html2canvas.js"></script>
 <script>
   //이미지(png)로 다운로드
   function getImageURL(){
@@ -33,6 +33,6 @@ var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지�
           document.getElementById('textArea').innerHTML = staticMapImageURL;
       });
   }
-</script>
+</script-->
 </body>
 </html>
