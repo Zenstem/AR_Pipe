@@ -7,6 +7,7 @@
 </head>
 <body>
 <div id="staticMap" style="width:1920px;height:1920px;"></div>
+<canvas id="staticMapCanvas" style="width:1920px;height:1920px;"></canvas>
 <p>
     <button onclick="getImageURL()">GetURL</button>
     <textarea id="textArea" cols="50" rows="10"></textarea>
@@ -17,7 +18,8 @@ function encodeBase64ImageTagviaCanvas (url) {
   return new Promise((resolve, reject) => {
     let image = new Image();
     image.onload = () => {
-      var canvas = document.createElement('canvas');
+      //var canvas = document.createElement('canvas');
+      let canvas = document.getElementById('staticMapCanvas');
       // or 'width' if you want a special/scaled size
       canvas.width = image.naturalWidth;
       // or 'height' if you want a special/scaled size
@@ -44,11 +46,11 @@ var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지�
 map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
 
   var mapLoad = encodeBase64ImageTagviaCanvas("https://spi.maps.daum.net/map2/map/skyviewimageservice?RDR=HybridRender&IW=1920&IH=1920&MX=591268&MY=804171&SCALE=0.625&service=open");
-  var mapImage;
+/*  var mapImage;
   mapLoad.then(function(mapCanvas)
 {
   mapImage = mapCanvas;
-      });
+      });*/
 </script>
 
 <script src="html2canvas.js"></script>
@@ -66,7 +68,7 @@ map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
 <script>
   //이미지(png)로 다운로드
   function getImageURL(){
-  html2canvas(mapImage).then(function(canvas){
+      html2canvas(document.getElementById('staticMapCanvas')).then(function(canvas){
           var staticMapImageURL = canvas.toDataURL();
           document.getElementById('textArea').innerHTML = staticMapImageURL;
       });
