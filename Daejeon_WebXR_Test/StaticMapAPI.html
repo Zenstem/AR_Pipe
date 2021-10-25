@@ -17,7 +17,6 @@
 function encodeBase64ImageTagviaCanvas (url) {
   return new Promise((resolve, reject) => {
     let image = new Image();
-    image.crossOrigin = 'Anonymous';
     image.onload = () => {
       //var canvas = document.createElement('canvas');
       let canvas = document.getElementById('staticMapCanvas');
@@ -26,6 +25,7 @@ function encodeBase64ImageTagviaCanvas (url) {
       // or 'height' if you want a special/scaled size
       canvas.height = image.naturalHeight;
       canvas.getContext('2d').drawImage(image, 0, 0);
+      image.crossOrigin = 'Anonymous';
 
       //let uri = canvas.toDataURL('image/png');
       resolve(canvas);
