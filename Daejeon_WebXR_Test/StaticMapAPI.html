@@ -44,9 +44,10 @@ var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // мІАл
 map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
 
   var mapLoad = encodeBase64ImageTagviaCanvas("https://spi.maps.daum.net/map2/map/skyviewimageservice?RDR=HybridRender&IW=1920&IH=1920&MX=591268&MY=804171&SCALE=0.625&service=open");
+  var mapImage;
   mapLoad.then(function(mapCanvas)
 {
-var mapImage = mapCanvas;
+  mapImage = mapCanvas;
       });
 </script>
 
