@@ -12,6 +12,26 @@
     <textarea id="textArea" cols="50" rows="10"></textarea>
 </p>
 
+<script>
+function encodeBase64ImageTagviaCanvas (url) {
+  return new Promise((resolve, reject) => {
+    let image = new Image();
+    image.onload = () => {
+      var canvas = document.createElement('canvas');
+      // or 'width' if you want a special/scaled size
+      canvas.width = image.naturalWidth;
+      // or 'height' if you want a special/scaled size
+      canvas.height = image.naturalHeight;
+      canvas.getContext('2d').drawImage(image, 0, 0);
+
+      //let uri = canvas.toDataURL('image/png');
+      resolve(canvas);
+    }
+    image.src = url;
+  });
+}
+</script>
+
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b5d34509ba7357aff65190a05cf70747"></script>
 <script>
 var staticMapContainer = document.getElementById('staticMap'), // 지도를 표시할 div 
@@ -50,24 +70,6 @@ var mapImage = mapCanvas;
           document.getElementById('textArea').innerHTML = staticMapImageURL;
       });
   }
-
-function encodeBase64ImageTagviaCanvas (url) {
-  return new Promise((resolve, reject) => {
-    let image = new Image();
-    image.onload = () => {
-      var canvas = document.createElement('canvas');
-      // or 'width' if you want a special/scaled size
-      canvas.width = image.naturalWidth;
-      // or 'height' if you want a special/scaled size
-      canvas.height = image.naturalHeight;
-      canvas.getContext('2d').drawImage(image, 0, 0);
-
-      //let uri = canvas.toDataURL('image/png');
-      resolve(canvas);
-    }
-    image.src = url;
-  });
-}
 </script>
 
 </body>
