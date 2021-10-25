@@ -29,8 +29,8 @@ function encodeBase64ImageTagviaCanvas (url) {
       //let uri = canvas.toDataURL('image/png');
       resolve(canvas);
     }
-    image.crossOrigin = "Anonymous";
     image.src = url;
+    image.crossOrigin = "Anonymous";
   });
 }
 </script>
