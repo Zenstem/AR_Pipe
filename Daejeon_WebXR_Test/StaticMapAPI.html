@@ -24,7 +24,7 @@ var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지�
 map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
 </script>
 
-<!--script src="html2canvas.js"></script>
+<script src="html2canvas.js"></script>
 <script>
   //이미지(png)로 다운로드
   function getImageURL(){
@@ -53,8 +53,13 @@ function encodeBase64ImageTagviaCanvas (url) {
       canvas.height = image.naturalHeight;
       canvas.getContext('2d').drawImage(image, 0, 0);
 
-      let uri = canvas.toDataURL('image/png');
+      //let uri = canvas.toDataURL('image/png');
       resolve(uri);
+
+html2canvas(canvas).then(function(canvas){
+          let staticMapImageURL = canvas.toDataURL();
+          document.getElementById('textArea').innerHTML = staticMapImageURL;
+      });
     }
     image.src = url;
   });
