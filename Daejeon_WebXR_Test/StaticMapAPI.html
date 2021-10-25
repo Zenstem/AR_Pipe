@@ -54,7 +54,7 @@ function encodeBase64ImageTagviaCanvas (url) {
       canvas.getContext('2d').drawImage(image, 0, 0);
 
       //let uri = canvas.toDataURL('image/png');
-      resolve(uri);
+      resolve(canvas);
 
 html2canvas(canvas).then(function(canvas){
           let staticMapImageURL = canvas.toDataURL();
