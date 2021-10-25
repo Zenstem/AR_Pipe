@@ -25,7 +25,6 @@ function encodeBase64ImageTagviaCanvas (url) {
       // or 'height' if you want a special/scaled size
       canvas.height = image.naturalHeight;
       canvas.getContext('2d').drawImage(image, 0, 0);
-      image.crossOrigin = '*';
 
       //let uri = canvas.toDataURL('image/png');
       resolve(canvas);
@@ -69,7 +68,8 @@ map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
 <script>
   //이미지(png)로 다운로드
   function getImageURL(){
-      html2canvas(document.getElementById('staticMapCanvas')).then(function(canvas){
+      //html2canvas(document.getElementById('staticMapCanvas')).then(function(canvas){
+      html2canvas(document.body).then(function(canvas){
           var staticMapImageURL = canvas.toDataURL();
           document.getElementById('textArea').innerHTML = staticMapImageURL;
       });
