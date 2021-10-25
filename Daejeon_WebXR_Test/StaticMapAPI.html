@@ -25,7 +25,7 @@ function encodeBase64ImageTagviaCanvas (url) {
       // or 'height' if you want a special/scaled size
       canvas.height = image.naturalHeight;
       canvas.getContext('2d').drawImage(image, 0, 0);
-      image.crossOrigin = 'Anonymous';
+      image.crossOrigin = '*';
 
       //let uri = canvas.toDataURL('image/png');
       resolve(canvas);
