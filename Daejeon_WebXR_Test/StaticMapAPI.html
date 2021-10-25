@@ -32,6 +32,19 @@ function encodeBase64ImageTagviaCanvas (url) {
     image.src = url;
   });
 }
+
+const getBase64FromUrl = async (url) => {
+  const data = await fetch(url);
+  const blob = await data.blob();
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(blob); 
+    reader.onloadend = function() {
+      const base64data = reader.result;   
+      resolve(base64data);
+    }
+  });
+}
 </script>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b5d34509ba7357aff65190a05cf70747"></script>
@@ -45,7 +58,7 @@ var staticMapContainer = document.getElementById('staticMap'), // 지도를 표�
 var map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption); // 지도를 생성합니다
 map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
 
-  var mapLoad = encodeBase64ImageTagviaCanvas("https://spi.maps.daum.net/map2/map/skyviewimageservice?RDR=HybridRender&IW=1920&IH=1920&MX=591268&MY=804171&SCALE=0.625&service=open");
+  //var mapLoad = encodeBase64ImageTagviaCanvas("https://spi.maps.daum.net/map2/map/skyviewimageservice?RDR=HybridRender&IW=1920&IH=1920&MX=591268&MY=804171&SCALE=0.625&service=open");
 /*  var mapImage;
   mapLoad.then(function(mapCanvas)
 {
@@ -69,10 +82,14 @@ map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
   //이미지(png)로 다운로드
   function getImageURL(){
       //html2canvas(document.getElementById('staticMapCanvas')).then(function(canvas){
-      html2canvas(document.body).then(function(canvas){
-          var staticMapImageURL = canvas.toDataURL();
-          document.getElementById('textArea').innerHTML = staticMapImageURL;
-      });
+      //html2canvas(document.body).then(function(canvas){
+      //    var staticMapImageURL = canvas.toDataURL();
+      //    document.getElementById('textArea').innerHTML = staticMapImageURL;
+      //});
+
+      getBase64FromUrl("https://spi.maps.daum.net/map2/map/skyviewimageservice?RDR=HybridRender&IW=1920&IH=1920&MX=591268&MY=804171&SCALE=0.625&service=open").then(a => {
+          document.getElementById('textArea').innerHTML = a;
+        });
   }
 </script>
 
