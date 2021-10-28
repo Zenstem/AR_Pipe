@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 1934051128
+CRC: 1624521499
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: pipedata
+      Dependencies: {}
+    Info_1:
+      Name: pipe_moonjidong
       Dependencies: {}
