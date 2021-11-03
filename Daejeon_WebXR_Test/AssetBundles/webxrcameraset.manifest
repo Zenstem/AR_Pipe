@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 2655909177
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 29561a05409a61a7484fa7aa2ea678b4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7b94f4e293b381192e9e7adbd2926620
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 510b30057f023304ea6447128ecc32af, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 07c5bb3a9f0a5704cad370d8e4bde17a, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/WebXRCameraSet.prefab
+Dependencies: []
