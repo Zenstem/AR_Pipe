@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1365805886
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: pipedata
+      Dependencies: {}
+    Info_1:
+      Name: pipe_moonjidong
+      Dependencies: {}
+    Info_2:
+      Name: controllers
+      Dependencies: {}
+    Info_3:
+      Name: managers
+      Dependencies: {}
