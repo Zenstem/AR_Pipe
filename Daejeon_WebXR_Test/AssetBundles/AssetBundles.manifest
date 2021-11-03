@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 4227808181
+CRC: 2841191084
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -9,5 +9,8 @@ AssetBundleManifest:
       Name: pipe_moonjidong
       Dependencies: {}
     Info_2:
-      Name: webxrcameraset
+      Name: controllers
+      Dependencies: {}
+    Info_3:
+      Name: managers
       Dependencies: {}
